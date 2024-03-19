@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.5.0)
+
+project(JNI_sample VERSION 0.1.0 LANGUAGES C CXX)
+
+include_directories(JNIGenerator/headers)
+include_directories(C:/Users/Admin/.jdks/openjdk-21.0.2/include/)
+include_directories(C:/Users/Admin/.jdks/openjdk-21.0.2/include/win32)
+
+add_library(${PROJECT_NAME} SHARED JNIGenerator/sources/test1_Test1.cpp)
+
+target_include_directories(JNI_sample PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
